@@ -1,0 +1,107 @@
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+
+        <!-- Public Sans from Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <style>
+            body { 
+                color: #f7f7f7;
+                background-color: #1b1b1b;
+                font-family: "Public Sans", sans-serif;
+                font-size: calc(10px + 0.5vw);
+            }
+            #content{
+                /* padding: 20vh 15vw; */
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            p {
+                font-size: 1.5em;
+                font-weight: 200;
+                line-height: 1.4;
+                max-width: 28em;
+            }
+            .lightweight {
+                font-weight: 200;
+                color: #ababab;
+            }
+            .token {
+                width: calc(10px + 1vw);
+                padding: 0 0.1em 0 0;
+                position: relative;
+                top: 0.1em;
+            }
+            a {
+                text-decoration: none;
+                white-space: nowrap;
+                color: #f7f7f7;
+                position: relative;
+            }
+            .link::after {
+                background-color: rgb(195, 38, 243);
+                position: absolute;
+                transition: 100ms ease-in;
+                z-index: -1;
+                content: '';
+                top: 90%;
+                left: 0;
+                right: 0;
+                bottom: -5%;
+            }
+            .link:hover::after {
+                top: 0em;
+                bottom: 0em;
+                left: -0.25em;
+                right: -0.25em;
+            }
+            .selected_link::after {
+                background-color: rgb(195, 38, 243);
+                position: absolute;
+                z-index: -1;
+                content: '';
+                top: 0em;
+                bottom: 0em;
+                left: -0.25em;
+                right: -0.25em;
+            }
+            a:focus-visible {
+                outline: 2px solid rgb(230, 150, 255);
+                border-radius: 3px;
+            }
+            .box {
+                display: flexbox
+            }
+            h2 {
+                margin-right: 1px;
+                padding-right: 0.5em;
+                display: inline-block
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <div class="box">
+                <h2><a href="index.html" class="selected_link"><b>LinkedIn</b></a></h2>
+                <h2><a href="index.html" class="link"><b>LinkedIn</b></a></h2>
+                <h2><a href="index.html" class="link"><b>LinkedIn</b></a></h2>
+            </div>
+            <p>My name is <b>Chris Brewer</b> <i class="lightweight">(he/him)</i>. </p>
+            <p>I am a <b>software developer</b> based in Chicago, IL. Professionally I work for McDonald's as an SDE on the mobile backend for <a href="https://apps.apple.com/us/app/mcdonalds/id922103212" class="link">the mobile app</a> (the backend work I do supports the <a href="https://play.google.com/store/apps/details?id=com.mcdonalds.app&hl=en_US" class="link">android version</a> as well).
+            In my personal time, I am a hobbyist game developer, graphic designer, 3D modeler, animator, and education enthusiast.
+            </p>
+            <p>
+                You can find me on <a href="index.html" class="link"><img class="token" src="photos/GitHub_token.png" alt="Icon of GitHub Logo"><b>GitHub</b></a> here, although my page is not very... "optimized for viewing", so beware. 
+                I am also on <a href="index.html" class="link"><img class="token" src="photos/linkedin_token.png" alt="Icon of GitHub Logo"><b>LinkedIn</b></a>, where you can see my professional history and most of the information on my resume.
+            </p>
+        </div>
+    </body>
+</html>
